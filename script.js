@@ -1,103 +1,79 @@
-// const ages = [20, 28, 19, 56];
-// const newAges = [];
+const ages = [20, 28, 19, 56];
+const newAges = [];
 
-// // ages.forEach(function (age) { //익명함수
-// //   newAges.push(age + 5);
-// // });
-
-// // function increaseAgeBy5(age) {
-// //   newAges.push(age + 5);
-// // }
-// // ages.forEach(increaseAgeBy5);
-
-// ages.forEach((age) => {
-//   //Arrow function
+// ages.forEach(function (age) { //익명함수
 //   newAges.push(age + 5);
 // });
 
-// ages.forEach((age) => newAges.push(age + 5));
+// function increaseAgeBy5(age) {
+//   newAges.push(age + 5);
+// }
+// ages.forEach(increaseAgeBy5);
 
-// //console.log(newAges);
+ages.forEach((age) => { //Arrow function
+  newAges.push(age + 5);
+});
 
-// // ForEach문의 두번째 파라미터(인덱스)
-// const courses = ["B", "M", "C", "P"];
-// courses.forEach(function (course, index) {
-//   //console.log(index + ': ' + course);
-// });
+ages.forEach((age) => newAges.push(age + 5));
 
-// // ForEach문의 세번째 파라미터(원본 배열)
-// courses.forEach(function (course, index, array) {
-//   //console.log(array);
-// });
+//console.log(newAges);
 
-// // const students = [{
-// //     firstName: 'John',
-// //     lastName: 'Doe',
-// //     학비: 5000
-// //   },
-// //   {
-// //     firstName: 'Stephen',
-// //     lastName: 'Matt',
-// //     학비: 7500
-// //   },
-// //   {
-// //     firstName: 'Abi',
-// //     lastName: 'Susu',
-// //     학비: 6000
-// //   }
-// // ];
+// ForEach문의 두번째 파라미터(인덱스)
+const courses = ['B', 'M', 'C', 'P'];
+courses.forEach(function (course, index) {
+  //console.log(index + ': ' + course);
+})
 
-// // //객체배열의 forEach문
-// // students.forEach((student) => {
-// //   console.log(student.firstName + " " + student.lastName);
-// // });
+// ForEach문의 세번째 파라미터(원본 배열)
+courses.forEach(function (course, index, array) {
+  //console.log(array);
+})
 
-// // let sum = 0;
-
-// // students.forEach((student) => {
-// //   sum += student.학비;
-// //   //sum = sum + student.학비;
-// // })
-
-// // console.log(sum);
-
-// const students = [
-//   {
-//     name: "John",
-//     courses: ["Math", "English", "Physics"],
+// const students = [{
+//     firstName: 'John',
+//     lastName: 'Doe',
+//     학비: 5000
 //   },
 //   {
-//     name: "Sarah",
-//     courses: ["Chem", "Math", "Computer"],
+//     firstName: 'Stephen',
+//     lastName: 'Matt',
+//     학비: 7500
 //   },
+//   {
+//     firstName: 'Abi',
+//     lastName: 'Susu',
+//     학비: 6000
+//   }
 // ];
 
-// //ForEach문 안의 다른 ForEach문
+// //객체배열의 forEach문
 // students.forEach((student) => {
-//   console.log(student);
-//   student.courses.forEach((c) => {
-//     console.log(c);
-//   });
+//   console.log(student.firstName + " " + student.lastName);
 // });
 
-const h2 = document.querySelector("h2");
+// let sum = 0;
 
-h2.addEventListener("mouseover", function () {
-  this.innerHTML = "마우스가 올라와있어요";
-  this.style.color = "red";
-});
+// students.forEach((student) => {
+//   sum += student.학비;
+//   //sum = sum + student.학비;
+// })
 
-h2.addEventListener("mouseleave", function () {
-  this.innerHTML = "마우스가 떠나갔어요";
-  this.style.color = "blue";
-});
+// console.log(sum);
 
-window.addEventListener("resize", function () {
-  h2.innerHTML = "사이즈가 바뀌었어요";
-  h2.style.color = "gold";
-});
+const students = [{
+    name: 'John',
+    courses: ['Math', 'English', 'Physics']
+  },
+  {
+    name: 'Sarah',
+    courses: ['Chem', 'Math', 'Computer']
+  }
+];
 
-h2.addEventListener("contextmenu", function () {
-  this.innerHTML = "오른쪽 마우스가 눌렸어요";
-  this.style.color = "#fff";
-});
+//ForEach문 안의 다른 ForEach문
+students.forEach((student) => {
+  console.log(student);
+  student.courses.forEach((c) => {
+    console.log(c);
+  })
+})
