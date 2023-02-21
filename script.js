@@ -10,7 +10,8 @@ const newAges = [];
 // }
 // ages.forEach(increaseAgeBy5);
 
-ages.forEach((age) => { //Arrow function
+ages.forEach((age) => {
+  //Arrow function
   newAges.push(age + 5);
 });
 
@@ -19,15 +20,15 @@ ages.forEach((age) => newAges.push(age + 5));
 //console.log(newAges);
 
 // ForEach문의 두번째 파라미터(인덱스)
-const courses = ['B', 'M', 'C', 'P'];
+const courses = ["B", "M", "C", "P"];
 courses.forEach(function (course, index) {
   //console.log(index + ': ' + course);
-})
+});
 
 // ForEach문의 세번째 파라미터(원본 배열)
 courses.forEach(function (course, index, array) {
   //console.log(array);
-})
+});
 
 // const students = [{
 //     firstName: 'John',
@@ -60,14 +61,15 @@ courses.forEach(function (course, index, array) {
 
 // console.log(sum);
 
-const students = [{
-    name: 'John',
-    courses: ['Math', 'English', 'Physics']
+const students = [
+  {
+    name: "John",
+    courses: ["Math", "English", "Physics"],
   },
   {
-    name: 'Sarah',
-    courses: ['Chem', 'Math', 'Computer']
-  }
+    name: "Sarah",
+    courses: ["Chem", "Math", "Computer"],
+  },
 ];
 
 //ForEach문 안의 다른 ForEach문
@@ -75,5 +77,5 @@ students.forEach((student) => {
   console.log(student);
   student.courses.forEach((c) => {
     console.log(c);
-  })
-})
+  });
+});
